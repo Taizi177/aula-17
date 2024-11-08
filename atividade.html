@@ -1,0 +1,24 @@
+<ul id="lista"></ul>
+
+<input id="text">
+<button onclick="adicionarItem()">Adicionar Item</button>
+<button onclick="removerItem()">Remover Item</button>
+
+<script>
+  function adicionarItem() {
+    const lista = document.getElementById("lista");
+    const novoItem = document.createElement("li");
+    const inputText = document.getElementById("text").value;
+    novoItem.innerText = inputText;
+    lista.appendChild(novoItem);
+  }
+
+  function removerItem() {
+    const lista = document.getElementById("lista");
+    if (lista.lastChild) {
+      lista.removeChild(lista.lastChild);
+    }
+  }
+</script>
+
+
